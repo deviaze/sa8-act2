@@ -4,13 +4,17 @@
 
 # SA8 - Act 2: Question # 09
 class Camera
-  def initialize
-    @status = false
-  end
+  attr_accessor :status
   def turn_on
-    @status = true
+    self.status = true
   end
   def turn_off
-    @status = false
+    self.status = false
   end
 end
+
+
+cameron = Camera.new
+
+cameron.turn_on
+puts cameron.status
